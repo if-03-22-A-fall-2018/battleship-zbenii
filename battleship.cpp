@@ -60,6 +60,32 @@ CellContent get_shot(int row, int col){
 }
 
 bool shoot(int row, int col){
+  if((row>=0&&row<FIELDSIZE)&&(col>=0&&col<FIELDSIZE))
+  {
+    if(op[row][col]==Water)
+    {
+      myguesses[row][col]=Water;
+      return true;
+    }
+    else if(op[row][col]==Boat)
+    {
+      myguesses[row][col]=Boat;
+
+      /*
+      for(int i=row-1;i<row+1;i++)
+      {
+        for(int x=col-1;x<col+1;x++)
+        {
+          if(i>=0&&i<FIELDSIZE&&x>=0&&x<FIELDSIZE)
+          {
+            myguesses[i][x]=Water;
+          }
+        }
+      }
+      */
+      return true;
+    }
+  }
   return false;
 }
 

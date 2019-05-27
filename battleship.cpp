@@ -75,7 +75,7 @@ bool shoot(int row, int col){
     return true;
   }
   return false;
-}
+  }
 
 
 CellContent get_my_guess(int row, int col){
